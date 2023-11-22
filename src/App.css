@@ -6,6 +6,10 @@
 }
 
 
+.listbox {
+  float: left;
+  color:blue;
+}
 
 .card {
   padding: 2em;

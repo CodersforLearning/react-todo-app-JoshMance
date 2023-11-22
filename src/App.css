@@ -4,7 +4,6 @@
   text-align: center;
 }
 
-
 .listbox {
   float: left;
   padding-inline: 50px;
@@ -13,13 +12,22 @@
 }
 
 .currentTasks {
-  background-color: #888;
+  background: rgba(253, 255, 255, 0.6);
   padding-inline: 150px;
-  height: 500px;
+  height: 700px;
+}
+
+.currentTasks:hover {
+  opacity: 0.3;
 }
 
 .newTask {
-  background-color: #e7d0d0;
+  background: rgba(253, 255, 255, 0.6);
+  
   padding-inline: 150px;
-  height: 60px;
+  height: 700px;
+}
+
+.newTask:hover {
+  opacity: 0.3;
 }

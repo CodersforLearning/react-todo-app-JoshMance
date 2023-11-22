@@ -4,10 +4,11 @@
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  
+  color: azure;
 
+  background-image: url(/src/night-sky.jpg);
+  background-size: contain;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,6 +41,7 @@ body {
 }
 
 hr {
+  color: azure;
   width: 1140px;
 }
 
@@ -49,11 +51,9 @@ h1 {
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 0.01;
 }
-
-
 
 button {
   border-radius: 8px;

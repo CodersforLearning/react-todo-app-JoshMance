@@ -10,10 +10,10 @@ function App() {
        <h1>Josh's To-Do App</h1>
 
        <div className="listbox">
-          col 1
+          <h4> Current Tasks </h4>
        </div>
        <div className="listbox">
-        col 2
+       <h4> New Task </h4>
        </div>
      
       <div className="card">

@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 24px;
   font-weight: 400;
 
@@ -33,9 +33,15 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2em;
+  line-height: 0.01;
 }
+
+h4 {
+  font-size: 1em;
+  line-height: 0.01;
+}
+
 
 button {
   border-radius: 8px;

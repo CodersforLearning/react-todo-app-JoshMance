@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -9,8 +8,8 @@
 .listbox {
   float: left;
   padding: 10rem;
-  top: -50px;
-  color:blue;
+  margin-top: -100pt;
+  color:rgb(255, 255, 255);
 }
 
 .card {

@@ -57,7 +57,7 @@ h4 {
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.3em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -66,12 +66,19 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ff9564;
+  border-color: #6ec20e;
+  background-color: rgb(41, 65, 17);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+input[type = text] {
+  height: 45px;
+  font-size: 20px;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

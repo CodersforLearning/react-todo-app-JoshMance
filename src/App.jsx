@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-       <h1>Josh's To-Do App</h1>
+       <h1>Josh's Task Planner</h1>
 
        <div className="listbox">
           <h4> Current Tasks </h4>

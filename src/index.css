@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,6 +36,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("../public/night-sky.jpg");
 }
 
 hr {
@@ -77,18 +78,4 @@ button:focus-visible {
 input[type = text] {
   height: 45px;
   font-size: 20px;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #ff9274;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

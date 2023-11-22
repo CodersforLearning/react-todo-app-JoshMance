@@ -4,7 +4,15 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const taskNames = [];
+  const nextId = 4;
+  const tasks =  [
+    { name: 'Go Shopping', id: 1},
+    { name: 'Clean the Car', id: 2},
+    { name: 'Read book', id: 3},
+  ];
+  const listTasks = tasks.map(task =>
+    <li key={task.id}> {task.name} </li>
+  );
 
   return (
     <div className="App">
@@ -12,19 +20,16 @@ function App() {
 
        <div className="listbox">
           <h4> Current Tasks </h4>
- 
-            <ul className="currentTask">
-              <li>Go shopping aaaaaaa</li>
-              <li>Clean the car</li>
-            </ul>
-  
+          <ul className="currentTask">{listTasks}</ul>
        </div>
+
        <div className="listbox">
        <h4> New Task </h4>
-       <ul className="newTask">
-              <li>Go shopping aa</li>
-              <li>Clean the car</li>
-            </ul>
+          <div className="newTask">
+
+            <input type="text" id="taskNames" name="name" required minlength="4" maxlength="8" size="20" />
+          
+          </div>
        </div>
      
       <div className="card">

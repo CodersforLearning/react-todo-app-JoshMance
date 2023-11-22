@@ -7,11 +7,22 @@
 
 .listbox {
   float: left;
-  padding: 10rem;
-  margin-top: -100pt;
+  padding-inline: 50px;
+  margin-top: -10pt;
   color:rgb(255, 255, 255);
 }
 
+.currentTask {
+  background-color: #888;
+  padding-inline: 150px;
+  height: 500px;
+}
+
+.newTask {
+  background-color: #888;
+  padding-inline: 150px;
+  height: 50px;
+}
 
 
 .card {

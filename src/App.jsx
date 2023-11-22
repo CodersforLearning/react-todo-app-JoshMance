@@ -12,9 +12,19 @@ function App() {
 
        <div className="listbox">
           <h4> Current Tasks </h4>
+ 
+            <ul className="currentTask">
+              <li>Go shopping aaaaaaa</li>
+              <li>Clean the car</li>
+            </ul>
+  
        </div>
        <div className="listbox">
        <h4> New Task </h4>
+       <ul className="newTask">
+              <li>Go shopping aa</li>
+              <li>Clean the car</li>
+            </ul>
        </div>
      
       <div className="card">
@@ -22,9 +32,6 @@ function App() {
           count is {count}
         </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }

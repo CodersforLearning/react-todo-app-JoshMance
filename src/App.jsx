@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 
+
 function App() {
 
   const [message, setMessage] = useState('');
@@ -14,20 +15,22 @@ function App() {
 
 
   return (
+    <><TasksList />
+    
     <div className="App">
-       <h1>Josh's Task Planner</h1>
-       <hr />
+      <h1>Josh's Task Planner</h1>
+      <hr />
 
-       <div className="listbox">
-          <h4> Current Tasks </h4>
-          <div className="currentTasks">
-            here
-          </div>
-       </div>
+      <div className="listbox">
+        <h4> Current Tasks </h4>
+        <div className="currentTasks">
+          here
+        </div>
+      </div>
 
-       <div className="listbox">
-       <h4> New Task </h4>
-          <div className="newTask">
+      <div className="listbox">
+        <h4> New Task </h4>
+        <div className="newTask">
 
           <input
             type="text"
@@ -35,13 +38,13 @@ function App() {
             name="message"
             onChange={handleChange}
             value={message}>
-            </input>
-          
-          </div>
-       </div>
-     
+          </input>
 
-    </div>
+        </div>
+      </div>
+
+
+    </div></>
   )
 }
 

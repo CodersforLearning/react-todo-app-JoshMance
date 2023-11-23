@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { render } from 'react-dom';
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
 
   function Tasks() {
-    const tasks = taskList.map((e) => <li key={e}>{e}</li>);
+    const tasks = taskList.map((e) => <li key={e}>{e} </li> );
     return (
       <ul> {tasks} </ul>
     );
@@ -31,18 +32,23 @@ function App() {
       <div className="listbox">
         <h4> New Task </h4>
         <div className="newTask">
-          <form>
-          <input id="newTask" type='text' value={task}
-            onChange={event => {
-              console.log(taskList);
-              setTask(event.target.value)
-              taskList.push(task)
-              setTaskList(taskList);
-            }}
-          />
-          <button> </button>
+          <form id = "newTaskForm">
+            <input type='text' value={task} 
+              onChange = {event => { 
+                setTask(event.target.value)
+                event.preventDefault();
+                
+              }}
+            />
+            <button
+              onClick = {event => {
+              taskList.push(task);
+                setTaskList(taskList);
+                event.preventDefault();
+              }}>
+              Enter
+              </button>
           </form>
-          
 
         </div>
       </div>

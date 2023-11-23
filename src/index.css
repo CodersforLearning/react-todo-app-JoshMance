@@ -62,13 +62,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  color:white;
+  background-color:rgba(19, 22, 114, 0.8);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #6ec20e;
-  background-color: rgb(41, 65, 17);
+  background-color:rgba(26, 32, 199, 0.6);
 }
 button:focus,
 button:focus-visible {

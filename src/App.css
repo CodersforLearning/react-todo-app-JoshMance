@@ -11,23 +11,28 @@
   color:rgb(255, 255, 255);
 }
 
+li {
+  color: black;
+}
+
+li:hover {
+  color:blue;
+  opacity: 0.5;
+}
+
 .currentTasks {
   background: rgba(253, 255, 255, 0.6);
   padding-inline: 150px;
   height: 700px;
 }
 
-.currentTasks:hover {
-  opacity: 0.3;
-}
-
 .newTask {
   background: rgba(253, 255, 255, 0.6);
   
-  padding-inline: 150px;
+  padding-inline: 100px;
   height: 700px;
 }
 
-.newTask:hover {
-  opacity: 0.3;
-}
+
+
+

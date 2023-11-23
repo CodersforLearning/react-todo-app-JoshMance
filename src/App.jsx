@@ -3,19 +3,17 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 
+function Tasks() {
+  const [names, setName] = useState(["A", "B"]);
+  const listNames = names.map((name) => <li key={name}>{name}</li>);
+  return (
+    <ul> {listNames} </ul>
+  );
+}
 
 function App() {
 
-  const [message, setMessage] = useState('');
- 
-  const handleChange = event => {
-    setMessage(event.target.value);
-    console.log('value is:', event.target.value);
-  };
-
-
   return (
-    <><TasksList />
     
     <div className="App">
       <h1>Josh's Task Planner</h1>
@@ -24,7 +22,7 @@ function App() {
       <div className="listbox">
         <h4> Current Tasks </h4>
         <div className="currentTasks">
-          here
+        <Tasks/> 
         </div>
       </div>
 
@@ -32,19 +30,10 @@ function App() {
         <h4> New Task </h4>
         <div className="newTask">
 
-          <input
-            type="text"
-            id="message"
-            name="message"
-            onChange={handleChange}
-            value={message}>
-          </input>
-
         </div>
       </div>
 
-
-    </div></>
+    </div>
   )
 }
 

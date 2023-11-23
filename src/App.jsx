@@ -3,32 +3,46 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 
-function Tasks() {
-  const [names, setName] = useState(["A", "B"]);
-  const listNames = names.map((name) => <li key={name}>{name}</li>);
-  return (
-    <ul> {listNames} </ul>
-  );
-}
-
 function App() {
+  const [task, setTask] = useState("");
+  const [taskList, setTaskList] = useState(["Task 1", "Task 2"]);
+
+
+  function Tasks() {
+    const tasks = taskList.map((e) => <li key={e}>{e}</li>);
+    return (
+      <ul> {tasks} </ul>
+    );
+  }
 
   return (
     
     <div className="App">
       <h1>Josh's Task Planner</h1>
-      <hr />
+      <hr/>
 
       <div className="listbox">
         <h4> Current Tasks </h4>
         <div className="currentTasks">
-        <Tasks/> 
+          <Tasks/>
         </div>
       </div>
 
       <div className="listbox">
         <h4> New Task </h4>
         <div className="newTask">
+          <form>
+          <input id="newTask" type='text' value={task}
+            onChange={event => {
+              console.log(taskList);
+              setTask(event.target.value)
+              taskList.push(task)
+              setTaskList(taskList);
+            }}
+          />
+          <button> </button>
+          </form>
+          
 
         </div>
       </div>

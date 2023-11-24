@@ -1,41 +1,33 @@
 #root {
-  max-width: 1280px;
+  max-width: 3000px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.listbox {
+  float: left;
+  padding-inline: 20px;
+  margin-top: 20pt;
+  color:rgb(255, 255, 255);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.currentTasks {
+  background: rgba(253, 255, 255, 0.6);
+  padding-inline: 150px;
+  height: 900px;
 }
 
-.card {
-  padding: 2em;
+.newTask {
+  background: rgba(253, 255, 255, 0.6);
+  
+  padding-inline: 100px;
+  height: 100px;
 }
 
-.read-the-docs {
-  color: #888;
-}
+
+
+

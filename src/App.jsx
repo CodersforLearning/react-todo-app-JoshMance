@@ -1,32 +1,71 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import { render } from 'react-dom';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [task, setTask] = useState("");
+  const [taskList, setTaskList] = useState(["Task 1", "Task 2"]);
+
+  function Tasks() {
+    const tasks = taskList.map((e) => <li key={e}>{e}  
+                                       <input type="checkbox"/> 
+                                      <button className="deleteButton"
+                                          onClick = {event => {
+                                            var newTaskList = [...taskList];
+                                            newTaskList.splice(newTaskList.indexOf(e), 1);
+                                            setTaskList(newTaskList);
+                                          }}>
+                                          Delete
+                                          </button>
+                                        
+                                      </li> );
+    return (
+        <ul> {tasks} </ul>
+      
+    );
+  }
 
   return (
+    
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h1 className="title">Josh's Task Planner</h1>
+      <hr/>
+
+      <div className="listbox">
+        <h4> Current Tasks </h4>
+        <div className="currentTasks">
+          <Tasks/>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="listbox">
+        <h4> New Task </h4>
+        <div className="newTask">
+          <form id = "newTaskForm">
+            <input type='text' value={task} 
+              onChange = {event => { 
+                setTask(event.target.value)
+                event.preventDefault();
+                
+              }}
+            />
+            <button className="enterButton"
+              onClick = {event => {
+                var newTaskList = [...taskList];
+                newTaskList.push(task);
+                setTaskList(newTaskList);
+                event.preventDefault();
+              }}>
+              Create
+              </button>
+          </form>
+
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
     </div>
   )
 }

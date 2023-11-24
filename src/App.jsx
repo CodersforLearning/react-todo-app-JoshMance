@@ -9,8 +9,6 @@ function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState(["Task 1", "Task 2"]);
 
-
-
   function Tasks() {
     const tasks = taskList.map((e) => <li key={e}>{e}  
                                        <input type="checkbox"/> 
@@ -33,7 +31,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>Josh's Task Planner</h1>
+      <h1 className="title">Josh's Task Planner</h1>
       <hr/>
 
       <div className="listbox">

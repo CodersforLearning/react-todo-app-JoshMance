@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 3000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -15,22 +15,17 @@ li {
   color: black;
 }
 
-li:hover {
-  color:blue;
-  opacity: 0.5;
-}
-
 .currentTasks {
   background: rgba(253, 255, 255, 0.6);
   padding-inline: 150px;
-  height: 700px;
+  height: 900px;
 }
 
 .newTask {
   background: rgba(253, 255, 255, 0.6);
   
   padding-inline: 100px;
-  height: 700px;
+  height: 100px;
 }
 
 

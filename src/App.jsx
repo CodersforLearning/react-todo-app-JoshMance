@@ -4,6 +4,7 @@ import './App.css'
 import { render } from 'react-dom';
 
 
+
 function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState(["Task 1", "Task 2"]);
@@ -11,17 +12,20 @@ function App() {
 
 
   function Tasks() {
-    const tasks = taskList.map((e) => <li key={e}>{e}            
-                                      <input type="checkbox"  
+    const tasks = taskList.map((e) => <li key={e}>{e}  
+                                       <input type="checkbox"/> 
+                                      <button className="deleteButton"
                                           onClick = {event => {
                                             var newTaskList = [...taskList];
                                             newTaskList.splice(newTaskList.indexOf(e), 1);
                                             setTaskList(newTaskList);
-                                          }}
-                                      /> 
+                                          }}>
+                                          Delete
+                                          </button>
+                                        
                                       </li> );
     return (
-       <table> <tr> <ul> {tasks} </ul> </tr> </table>
+        <ul> {tasks} </ul>
       
     );
   }
@@ -50,14 +54,14 @@ function App() {
                 
               }}
             />
-            <button
+            <button className="enterButton"
               onClick = {event => {
                 var newTaskList = [...taskList];
                 newTaskList.push(task);
                 setTaskList(newTaskList);
                 event.preventDefault();
               }}>
-              Enter
+              Create
               </button>
           </form>
 

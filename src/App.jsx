@@ -9,10 +9,20 @@ function App() {
   const [taskList, setTaskList] = useState(["Task 1", "Task 2"]);
 
 
+
   function Tasks() {
-    const tasks = taskList.map((e) => <li key={e}>{e} </li> );
+    const tasks = taskList.map((e) => <li key={e}>{e}            
+                                      <input type="checkbox"  
+                                          onClick = {event => {
+                                            var newTaskList = [...taskList];
+                                            newTaskList.splice(newTaskList.indexOf(e), 1);
+                                            setTaskList(newTaskList);
+                                          }}
+                                      /> 
+                                      </li> );
     return (
-      <ul> {tasks} </ul>
+       <table> <tr> <ul> {tasks} </ul> </tr> </table>
+      
     );
   }
 
@@ -42,8 +52,9 @@ function App() {
             />
             <button
               onClick = {event => {
-              taskList.push(task);
-                setTaskList(taskList);
+                var newTaskList = [...taskList];
+                newTaskList.push(task);
+                setTaskList(newTaskList);
                 event.preventDefault();
               }}>
               Enter
